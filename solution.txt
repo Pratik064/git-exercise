@@ -1,0 +1,107 @@
+	It contain solution for every scenarios 
+
+  1.	Created a repo using github UI (repo - git-exercise)
+  
+  2.	Created a empty folder with name - git-learn, made few changes and push it to repo
+  		mkdir git-learn
+  		cd git-learn
+  		git init
+  		git pull <HTTPS>
+  		touch pratik.txt ///// Created a file 
+  		git add pratik.txt
+  		git commit -m "Add file Pratik.txt"
+  		git remote add https://github.com/Pratik064/git-exercise.git
+  		git push -u origin main
+  		
+  3.	Scenario raised to resolve the conflits
+  		git branch exercise/conflict-resolution
+		git switch exercise/conflict-resolution
+		open pratik.txt 
+		git add pratik.txt
+		git commit -m "Update pratik.txt"
+		git push --set-upstream origin exercise/conflict-resolution 
+		git switch main 
+		git open pratik.txt 
+		git add pratik.txt 
+		git commit -m "Update pratik.txt in main branch"
+		git push --set-upstream origin main
+		git switch exercise/conflict-resolution
+		git merge main 			/// See screenshot 1
+		open pratik.txt 		/// resolved the conflicts 
+		git add pratik.txt
+		git commit -m "Resloved merge conflicts"
+		git merge
+		git branch -d exercise/conflict-resolution 
+		
+		
+4. 	Scenario to overview the change on diffrent branches 
+		git branch exercise/diff-checker
+		git switch exercise/diff-checker 
+		open pratik.txt
+		git add pratik.txt 
+		git commit -m "Update pratik.txt in diff-checker"
+		git diff 9ceee7b5da1a39a9e1023b682c7e481473eb7120 33419682ecaddd27f59f37b7cf7448c938a3fb8f    	///// Look for screenshot 2
+		git open pratik.txt 
+		git switch main 
+		git open pratik.txt 		/// Presented both SS Screenshot 3 and Screenshot 4
+		
+		
+5.	Scenario 5, is to push the branch to github and then delete it locally 
+		git switch main 
+		git branch -d exercise/diff-checker 
+		
+6. 	Scenario 6, do stashing excrices
+		git branch exercise/stash-scenario
+		git switch main 
+		open pratik.txt 
+		git add pratik.txt 
+		git commit -m "Update pratik.txt for stashing"
+		git stash 
+		git switch main 
+		git open pratik.txt 
+		git add pratik.txt 
+		git commit -m "Update pratik.txt in main"
+		git switch exercise/stash-scenario
+		git merge main
+		git commit -m "Final result of scenario 6 achived"
+		git push
+		
+7. 	Scenario 7, Create a hook to perform simple print
+		ls -al  
+		cd .git/hooks
+		touch post-commit
+		open post-commit
+		------------------
+
+8. 	Scenario 8, make a copy of the pre-existing repo 
+		git cd ..
+		mkdir git-exercise-copy
+		cd git-exercise-copy
+		git clone https://github.com/Pratik064/git-exercise.git
+
+9. 	Sceneario 9, just create a tag for upmade version 
+		cd ..
+		cd git-learn 
+		git log --oneline --decorate --graph --all
+		git tag 1.0.0
+		git log --oneline --decorate --graph --all		// has been shared in screenshot6
+		git push --tag 
+		
+Done 
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+			
