@@ -7,7 +7,7 @@
   		cd git-learn
   		git init
   		git pull <HTTPS>
-  		touch pratik.txt ///// Created a file 
+  		touch pratik.txt 
   		git add pratik.txt
   		git commit -m "Add file Pratik.txt"
   		git remote add https://github.com/Pratik064/git-exercise.git
@@ -70,8 +70,10 @@
 		ls -al  
 		cd .git/hooks
 		touch post-commit
+		chmod 755 post-commit
+		chomd +x post-commit
 		open post-commit
-		------------------
+		sh post-commit
 
 8. 	Scenario 8, make a copy of the pre-existing repo 
 		git cd ..
